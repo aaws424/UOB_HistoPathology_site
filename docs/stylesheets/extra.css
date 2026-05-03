@@ -1,55 +1,31 @@
-/* Matching the Screenshot Aesthetics */
+/* Minimal Dashboard */
 :root {
     --md-primary-fg-color: #000000;
-    --md-accent-fg-color: #009688; /* Teal accent */
 }
 
-/* Sidebar styling */
+/* Minimal Sidebar */
 .md-sidebar--primary {
     display: block !important;
-    width: 16rem !important;
-    background-color: #1e1e1e !important;
+    width: 14rem !important;
 }
 
-.md-nav__link {
-    color: #e0e0e0 !important;
-    font-size: 0.9rem;
+.md-sidebar--secondary {
+    display: none !important;
 }
 
-.md-nav__link--active {
-    color: #009688 !important; /* Teal for active items */
-}
-
-/* Main Content Area */
 .md-content {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-}
-
-.md-typeset h1 {
-    color: #ffffff !important;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-/* Tab Styling */
-.tabbed-set {
-    background: #1e1e1e;
-    border-radius: 4px;
-    padding: 10px;
+    max-width: 100% !important;
 }
 
 #openseadragon-viewer {
     width: 100%;
-    height: 65vh;
+    height: calc(100vh - 100px);
     background: #000;
-    border: 1px solid #333;
 }
 
-.category-card {
-    border-left: 3px solid #009688;
-    padding-left: 15px;
-    margin: 20px 0;
+/* Hide page title inside the viewer page for maximum space */
+.md-typeset h1 {
+    display: none;
 }
 
 .category-card {
