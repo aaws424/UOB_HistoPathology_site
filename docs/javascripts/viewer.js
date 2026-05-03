@@ -2,9 +2,18 @@ function initViewer(slideName, caption) {
     const viewerElement = document.getElementById('openseadragon-viewer');
     if (!viewerElement) return;
 
-    // The tile server is expected to run on port 5000
+    // Calculate the relative path to the root 'assets' folder
+    // This works whether you are at the root or deep in a subfolder
+    const scripts = document.getElementsByTagName('script');
+    const currentScript = scripts[scripts.length - 1].src;
+    const siteRoot = currentScript.substring(0, currentScript.indexOf('/javascripts/'));
+    
+    const staticDziUrl = `${siteRoot}/assets/slides/${slideName}.dzi`;
     const tileServerUrl = 'http://localhost:5000';
-    const dziUrl = `${tileServerUrl}/dzi/${slideName}.dzi`;
+    const serverDziUrl = `${tileServerUrl}/dzi/${slideName}.dzi`;
+
+    // Try static first, then fallback to server if on localhost
+    const dziUrl = staticDziUrl;
 
     const viewer = OpenSeadragon({
         id: "openseadragon-viewer",
