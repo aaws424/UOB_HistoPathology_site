@@ -19,6 +19,13 @@
     white-space: normal !important; /* Allow it to wrap if needed */
 }
 
+/* Fix overlap between title and the sidebar return/back button on mobile */
+@media screen and (max-width: 1219px) {
+    .md-nav__title {
+        padding-left: 3rem !important; /* Make room for the back arrow icon */
+    }
+}
+
 .md-sidebar--secondary {
     display: none !important;
 }
