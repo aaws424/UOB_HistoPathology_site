@@ -1,5 +1,5 @@
 site_name: University of Baghdad Veterinary Medicine
-site_url: https://example.com
+site_url: https://aaws424.github.io/UOB_HistoPathology_site/
 theme:
   name: material
   palette:
@@ -21,7 +21,26 @@ extra_javascript:
 
 nav:
   - Home: index.md
+  - Introduction: introduction.md
+  - General Pathology:
+      - Amyloidosis: data/general/amyloidosis.md
+      - Congestion: data/general/congestion.md
+      - Erosion: data/general/erosion.md
+      - Extracellular Deposits: data/general/extracellular.md
+      - Cell Injury: data/general/injury.md
+      - Intracellular Accumulations: data/general/intracellular.md
+      - Ischemia: data/general/ischemia.md
+      - Repair: data/general/repair.md
+      - Techniques: data/general/techniques.md
+  - Infectious Diseases:
+      - Bacteria: data/infectious/bacteria.md
+      - Fungi: data/infectious/fungi.md
+      - Viruses: data/infectious/viruses.md
   - Inflammation:
+      - Acute: data/inflammation/acute.md
+      - Chronic: data/inflammation/chronic.md
       - Gastritis: data/inflammation/gastritis.md
+      - Granulamatous: data/inflammation/granulamatous.md
   - Organs:
       - Spleen: data/organs/spleen.md
+

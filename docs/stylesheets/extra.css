@@ -3,10 +3,12 @@
     --md-primary-fg-color: #000000;
 }
 
-/* Minimal Sidebar */
-.md-sidebar--primary {
-    display: block !important;
-    width: 14rem !important;
+/* Minimal Sidebar - Only apply fixed layout on Desktop */
+@media screen and (min-width: 1220px) {
+    .md-sidebar--primary {
+        display: block !important;
+        width: 14rem !important;
+    }
 }
 
 /* Scale down the long University title */
@@ -22,14 +24,10 @@
 }
 
 .md-content {
-    max-width: 100% !important;
+    /* max-width: 100% !important; Removed to prevent breaking Material's responsive layout */
 }
 
-#openseadragon-viewer {
-    width: 100%;
-    height: calc(100vh - 100px);
-    background: #000;
-}
+/* Removed duplicate openseadragon-viewer rules */
 
 /* Hide page title inside the viewer page for maximum space */
 .md-content .md-typeset h1 {
@@ -109,9 +107,9 @@ mark {
 .md-nav__title {
     background-color: #333333 !important;
     color: #ffffff !important;
-    font-size: 1.2rem;
     padding: 1rem;
     font-weight: bold;
+    /* font-size: 1.2rem; Removed because it conflicts with the scale-down rule at the top */
 }
 
 /* Header Styling */
@@ -130,12 +128,20 @@ mark {
 */
 #openseadragon-viewer {
     width: 100%;
-    height: 85vh; /* Increased from 70vh */
+    height: 60vh; /* Safe default for small screens */
     background-color: #000;
     border: 2px solid #222;
     margin-top: 1rem;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box; /* Crucial to prevent horizontal overflow on mobile */
+    max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    #openseadragon-viewer {
+        height: 85vh; /* Larger view for desktops */
+    }
 }
 
 .viewer-caption {
