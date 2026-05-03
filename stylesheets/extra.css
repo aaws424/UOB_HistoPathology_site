@@ -1,0 +1,190 @@
+/* Minimal Dashboard */
+:root {
+    --md-primary-fg-color: #000000;
+}
+
+/* Minimal Sidebar */
+.md-sidebar--primary {
+    display: block !important;
+    width: 14rem !important;
+}
+
+/* Scale down the long University title */
+.md-nav__title {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+    padding: 15px !important;
+    white-space: normal !important; /* Allow it to wrap if needed */
+}
+
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+.md-content {
+    max-width: 100% !important;
+}
+
+#openseadragon-viewer {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: #000;
+}
+
+/* Hide page title inside the viewer page for maximum space */
+.md-content .md-typeset h1 {
+    display: none;
+}
+
+/* Ensure titles ARE visible in search results */
+.md-search-result__article h1 {
+    display: block !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+}
+
+/* Fix Search Result Visibility and Layout */
+.md-search-result {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333;
+    z-index: 1000 !important;
+    max-height: 400px !important; /* Allow more height */
+}
+
+.md-search-result__list {
+    display: block !important;
+}
+
+.md-search-result__link {
+    color: #ffffff !important;
+    display: block !important;
+    padding: 15px 20px !important; /* Increased padding */
+    min-height: 60px !important;   /* Ensure enough height for icons */
+}
+
+.md-search-result__link:hover {
+    background-color: #333 !important;
+}
+
+.md-search-result__article {
+    color: #e0e0e0 !important;
+    overflow: visible !important; /* Prevent clipping */
+}
+
+.md-search-result__teaser {
+    color: #bbbbbb !important;
+}
+
+mark {
+    background-color: #009688 !important; /* Teal highlight */
+    color: #ffffff !important;
+}
+
+.category-card {
+    border-left: 4px solid #2196f3;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+.md-sidebar--primary {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.md-nav__link {
+    color: #eeeeee !important;
+}
+
+.md-nav__link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.md-nav__item--active > .md-nav__link {
+    color: #ffffff !important;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.md-nav__title {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Header Styling */
+.md-header {
+    background-color: #1a1a1a !important;
+}
+
+.md-header__topic {
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+/* 
+   IMMERSIVE VIEWER CONTAINER 
+   Increased height and better borders for a premium feel.
+*/
+#openseadragon-viewer {
+    width: 100%;
+    height: 85vh; /* Increased from 70vh */
+    background-color: #000;
+    border: 2px solid #222;
+    margin-top: 1rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.viewer-caption {
+    background: #111;
+    color: #ccc;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-top: 1px solid #333;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02rem;
+}
+
+/* Readability Improvements */
+article h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+article p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 1000px; /* Keep text lines readable while viewer is wide */
+}
+
+/* Search Box override */
+.md-search__input {
+    background-color: #555 !important;
+    color: white !important;
+}
+
+.md-search__input::placeholder {
+    color: #ccc !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
