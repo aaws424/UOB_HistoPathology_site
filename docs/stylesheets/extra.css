@@ -32,17 +32,44 @@
 }
 
 /* Hide page title inside the viewer page for maximum space */
-.md-typeset h1 {
+.md-content .md-typeset h1 {
     display: none;
 }
 
-/* Fix Search Result Visibility */
+/* Ensure titles ARE visible in search results */
+.md-search-result__article h1 {
+    display: block !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+}
+
+/* Fix Search Result Visibility and Layout */
+.md-search-result {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333;
+    z-index: 1000 !important;
+    max-height: 400px !important; /* Allow more height */
+}
+
+.md-search-result__list {
+    display: block !important;
+}
+
 .md-search-result__link {
     color: #ffffff !important;
+    display: block !important;
+    padding: 15px 20px !important; /* Increased padding */
+    min-height: 60px !important;   /* Ensure enough height for icons */
+}
+
+.md-search-result__link:hover {
+    background-color: #333 !important;
 }
 
 .md-search-result__article {
     color: #e0e0e0 !important;
+    overflow: visible !important; /* Prevent clipping */
 }
 
 .md-search-result__teaser {
