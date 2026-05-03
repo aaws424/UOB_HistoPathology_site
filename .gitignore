@@ -1,1 +1,21 @@
-/docs/assets
+# Ignore build output
+/build
+docs/assets
+/site
+/slides
+
+
+
+# Ignore virtual environment
+/.venv
+/.env
+
+# Ignore Python cache
+__pycache__
+*.py[cod]
+
+# Ignore IDE files
+.vscode
+.idea
+*.swp
+*.swo
