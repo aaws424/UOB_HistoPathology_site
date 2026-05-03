@@ -9,6 +9,14 @@
     width: 14rem !important;
 }
 
+/* Scale down the long University title */
+.md-nav__title {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+    padding: 15px !important;
+    white-space: normal !important; /* Allow it to wrap if needed */
+}
+
 .md-sidebar--secondary {
     display: none !important;
 }
@@ -26,6 +34,24 @@
 /* Hide page title inside the viewer page for maximum space */
 .md-typeset h1 {
     display: none;
+}
+
+/* Fix Search Result Visibility */
+.md-search-result__link {
+    color: #ffffff !important;
+}
+
+.md-search-result__article {
+    color: #e0e0e0 !important;
+}
+
+.md-search-result__teaser {
+    color: #bbbbbb !important;
+}
+
+mark {
+    background-color: #009688 !important; /* Teal highlight */
+    color: #ffffff !important;
 }
 
 .category-card {
