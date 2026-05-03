@@ -1,0 +1,128 @@
+/* Match Leeds Virtual Pathology Atlas Aesthetics */
+
+:root {
+    --md-primary-fg-color: #000000;
+    --md-primary-fg-color--transparent: rgba(0, 0, 0, 0.7);
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--light: #f5f5f5;
+}
+
+/* 
+   EXPANDED LAYOUT 
+   Gives more space for the viewer and text as requested.
+*/
+.md-grid {
+    max-width: 95vw !important; /* Almost full width */
+}
+
+.md-main__inner {
+    margin-top: 0;
+}
+
+.md-content {
+    max-width: 100% !important;
+}
+
+/* Sidebar Styling */
+.md-sidebar--primary {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.md-nav__link {
+    color: #eeeeee !important;
+}
+
+.md-nav__link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.md-nav__item--active > .md-nav__link {
+    color: #ffffff !important;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.md-nav__title {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Header Styling */
+.md-header {
+    background-color: #1a1a1a !important;
+}
+
+.md-header__topic {
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+/* 
+   IMMERSIVE VIEWER CONTAINER 
+   Increased height and better borders for a premium feel.
+*/
+#openseadragon-viewer {
+    width: 100%;
+    height: 85vh; /* Increased from 70vh */
+    background-color: #000;
+    border: 2px solid #222;
+    margin-top: 1rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.viewer-caption {
+    background: #111;
+    color: #ccc;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-top: 1px solid #333;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02rem;
+}
+
+/* Readability Improvements */
+article h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+article p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 1000px; /* Keep text lines readable while viewer is wide */
+}
+
+/* Search Box override */
+.md-search__input {
+    background-color: #555 !important;
+    color: white !important;
+}
+
+.md-search__input::placeholder {
+    color: #ccc !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

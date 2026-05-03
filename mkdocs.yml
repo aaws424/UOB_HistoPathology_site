@@ -1,0 +1,55 @@
+site_name: Virtual Pathology Atlas
+site_url: https://example.com
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: grey
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - search.highlight
+    - search.share
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js
+  - javascripts/viewer.js
+
+nav:
+  - Home Page: index.md
+  - Introduction: introduction.md
+  - Featured Slides:
+      - Spleen Histology (BigTIFF): data/spleen.md
+  - Pathology Library:
+      - General Pathology:
+          - 1 Techniques Used in Pathology: data/general/techniques.md
+          - 2 Intracellular Accumulations: data/general/intracellular.md
+          - 3 Extracellular Accumulations: data/general/extracellular.md
+          - 4 Cellular Injury: data/general/injury.md
+          - 5 Ischemia and Necrosis: data/general/ischemia.md
+          - 6 Congestion: data/general/congestion.md
+          - 7 Amyloidosis: data/general/amyloidosis.md
+          - 8 Repair Mechanisms: data/general/repair.md
+          - 9 Erosion: data/general/erosion.md
+      - Inflammation:
+          - 10 Acute Inflammation: data/inflammation/acute.md
+          - 11 Chronic inflammation: data/inflammation/chronic.md
+          - 12 Granulamatous inflammation: data/inflammation/granulamatous.md
+      - Infectious Diseases:
+          - 13 Viruses: data/infectious/viruses.md
+          - 14 Bacteria: data/infectious/bacteria.md
+          - 15 Fungi: data/infectious/fungi.md
+
+plugins:
+  - search
